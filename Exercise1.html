@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <div id="app">
+      <p>1. Fill the p with your Name and Age - using Interpolation </p>
+      <p>Interpolated data - {{name}} {{(age)}}</p>
+      <hr>
+      
+      <p>2. Output your age, multiplied by 3</p>
+      <p>{{age*3}}</p>
+      <hr>
+      
+      <p>3. Call a function to output a random float between 0 and 1 (Math.random())</p>
+      <p>{{displayRandom()}}</p>
+      <hr>
+      
+      <p>4. Search any image on Google and output it here by binding the "src" attribute</p>
+      <div>
+        <img  v-bind:src="showImg()" style="width:170px;height:170px">
+      </div>
+      <hr>
+      
+      <p>5. Pre-Populate this input with your name (set the "value" attribute)</p>
+      <div>
+        <input type="text" v-model="name">
+        <input type="text" v-bind:value="name">
+      </div>
+    </div>
+    <script type="text/javascript">
+      var id = new Vue({
+        el: '#app',
+        data: {
+          name:'Srijita',
+          age: 27,
+          logo:'https://cdn.shopify.com/s/files/1/0533/2089/files/vuejs-tutorial_2d2a853c-aa2f-44b0-80df-933b495f77f8.png?v=1509478492'
+        },
+        methods: {
+          displayRandom : function() {
+            return Math.random()
+          },
+          showImg: function() {
+            return this.logo;
+          } 
+        }
+      })
+    </script>
+  </body>
+
+</html>
