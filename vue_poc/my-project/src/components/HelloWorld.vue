@@ -15,6 +15,12 @@
       <li>
         <router-link to="/exNine">Exercise Nine</router-link>
       </li>
+      <li>
+        <router-link to="/portfolio">Portfolio</router-link>
+      </li>
+      <li>
+        <router-link to="/stocks">Stocks</router-link>
+      </li>
     </ul>
   </div>
 </template>

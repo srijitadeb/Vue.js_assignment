@@ -5,6 +5,8 @@ import exSix from '@/components/exSix'
 //import exSeven from '@/components/exSeven'
 import exEight from '@/components/exEight'
 import exNine from '@/components/exNine'
+import Portfolio from '@/components/portfolio/Portfolio.vue'
+import Stocks from '@/components/stocks/Stocks.vue'
 
 Vue.use(Router)
 
@@ -29,6 +31,16 @@ export default new Router({
       path: '/exNine',
       name: 'exNine',
       component: exNine
+    },
+    {
+      path: '/portfolio',
+      name: 'portfolio',
+      component: Portfolio
+    },
+    {
+      path: '/stocks',
+      name: 'stocks',
+      component: Stocks
     }
     // {
     //   path: '/exSeven',
